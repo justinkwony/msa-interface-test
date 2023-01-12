@@ -16,7 +16,10 @@ Micro Service Archtecture에서 App간 인터페이스(Rest vs gRPC) 간 속도 
 
 ## 테스트 환경
 Kubernetes(RedHat Openshift)\
-테스트 앱 복제수: 4 Pods
+테스트 앱 복제수: 4 Pods\
+\
+local 테스트시, hosts 수정
+> (local_ip) test1-service test2-service
 
 ## 테스트 결과
 | Users | Executions | | 90% 평균 ms | |
