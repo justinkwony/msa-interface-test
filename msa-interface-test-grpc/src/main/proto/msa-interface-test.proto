@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.nonghyupit.with.smart.office.mobile.grpc";
+option java_outer_classname = "TestProto";
+
+service TestService {
+	rpc call (TestRequest) returns (TestResponse);
+}
+
+message TestRequest {
+	string	url   = 1;
+	int64	start = 2;
+	int64	end   = 3;
+}
+
+message TestResponse {
+	string	result = 1;
+}

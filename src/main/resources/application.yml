@@ -1,0 +1,27 @@
+server:
+  port: 8081
+
+rest:
+  client:
+    test1ServiceRest:
+      address: http://test1-service:8081
+    test2ServiceRest:
+      address: http://test2-service:8082
+
+grpc:
+  server:
+    port: 9081
+  client:
+    test1ServiceGrpcImpl:
+      address: static://test1-service:9081
+      negotiationtype: plaintext
+    test2ServiceGrpcImpl:
+      address: static://test2-service:9082
+      negotiationtype: plaintext
+
+logging:
+  level:
+    com.nonghyupit: debug
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} %line - %-0.-10000msg%n"
+    file: "%d %p %c{1.} [%t] %m%n"
