@@ -1,0 +1,24 @@
+spring.application.name: msa-interface-test
+
+server:
+  port: 8081
+
+rest:
+  client:
+    converterRest:
+      address: http://converter-rest:8082
+
+grpc:
+  server:
+    port: 9081
+  client:
+    converterGrpcImpl:
+      address: static://converter-grpc:9082
+      negotiationtype: plaintext
+
+logging:
+  level:
+    com.nonghyupit: info
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} %line - %-0.-10000msg%n"
+    file: "%d %p %c{1.} [%t] %m%n"

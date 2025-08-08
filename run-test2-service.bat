@@ -1,0 +1,1 @@
+java -Dserver.port=8082 -Dgrpc.server.port=9082 -Dlogging.level.com.nonghyupit=info -jar ./build/libs/msa-interface-test-1.0.jar
